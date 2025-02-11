@@ -1,22 +1,41 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+//Teste Maykele
+//Nível Novato;
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    printf("Desafio Cartas Super Trunfo!\n");
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //como o código possuia letra e número optei por colocar a variável no formato de "string";
+    char codigo_carta[10];
+    char nome[30];
+    double populacao;
+    double area;
+    double pib;
+    int pontos_turisticos;
+
+
+    printf("Digite o código da carta: \n");
+    scanf( "%s", &codigo_carta);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", &nome);
+
+    //percebi que com o %f não estava retornando o valor que o usuário declarava, então decidi colocar o %lf para retornar com sucesso o valor
+    printf("Digite a população: \n");
+    scanf("%lf", &populacao);
+
+    printf("Digite a área territorial: \n");
+    scanf("%lf", &area);
+
+    printf("Digite o PIB: \n");
+    scanf("%lf", &pib);
+
+    printf("Digite a quantidade de pontos turísticos: \n");
+    scanf("%d", &pontos_turisticos);
+
+
+    printf("Código da carta: %s. \n Cidade: %s. \n População: %lf. \n Área Territorial: %lf. \n PIB: %lf. \n Pontos Turísticos: %d. \n", codigo_carta, nome, populacao, area, pib, pontos_turisticos);
 
     return 0;
 }
