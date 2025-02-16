@@ -14,6 +14,7 @@ int main() {
     float area;
     float pib;
     int pontos_turisticos;
+    
 
     // retirei o & antes das variáveis tipo char pois estava dando erro
     printf("Digite o estado: \n");
@@ -38,8 +39,11 @@ int main() {
     printf("Digite a quantidade de pontos turísticos: \n");
     scanf("%d", &pontos_turisticos);
 
+    float densidade = populacao / area;
+    float pib_per_capita = pib / populacao;
 
-    printf(" Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %d. \n Área Territorial: %f. \n PIB: %f. \n Pontos Turísticos: %d. \n", estado, codigo_carta, nome, populacao, area, pib, pontos_turisticos);
+    printf(" Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %d. \n Área Territorial: %f. \n Densidade Populacional: %f. \n PIB: %f. \n PIB per Capita: %f. \n Pontos Turísticos: %d. \n", 
+        estado, codigo_carta, nome, populacao, area, densidade, pib, pib_per_capita, pontos_turisticos);
 
     return 0;
 }
