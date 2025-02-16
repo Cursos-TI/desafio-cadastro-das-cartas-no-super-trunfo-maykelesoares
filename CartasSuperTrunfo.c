@@ -7,35 +7,39 @@ int main() {
     printf("Desafio Cartas Super Trunfo!\n");
     
     //como o código possuia letra e número optei por colocar a variável no formato de "string";
+    char estado[20];
     char codigo_carta[10];
     char nome[30];
-    double populacao;
-    double area;
-    double pib;
+    int populacao;
+    float area;
+    float pib;
     int pontos_turisticos;
 
+    // retirei o & antes das variáveis tipo char pois estava dando erro
+    printf("Digite o estado: \n");
+    scanf( "%s", estado);
 
     printf("Digite o código da carta: \n");
-    scanf( "%s", &codigo_carta);
+    scanf( "%s", codigo_carta);
 
     printf("Digite o nome da cidade: \n");
-    scanf("%s", &nome);
+    scanf("%s", nome);
 
-    //percebi que com o %f não estava retornando o valor que o usuário declarava, então decidi colocar o %lf para retornar com sucesso o valor
+    
     printf("Digite a população: \n");
-    scanf("%lf", &populacao);
+    scanf("%d", &populacao);
 
     printf("Digite a área territorial: \n");
-    scanf("%lf", &area);
+    scanf("%f", &area);
 
     printf("Digite o PIB: \n");
-    scanf("%lf", &pib);
+    scanf("%f", &pib);
 
     printf("Digite a quantidade de pontos turísticos: \n");
     scanf("%d", &pontos_turisticos);
 
 
-    printf("Código da carta: %s. \n Cidade: %s. \n População: %lf. \n Área Territorial: %lf. \n PIB: %lf. \n Pontos Turísticos: %d. \n", codigo_carta, nome, populacao, area, pib, pontos_turisticos);
+    printf(" Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %d. \n Área Territorial: %f. \n PIB: %f. \n Pontos Turísticos: %d. \n", estado, codigo_carta, nome, populacao, area, pib, pontos_turisticos);
 
     return 0;
 }
