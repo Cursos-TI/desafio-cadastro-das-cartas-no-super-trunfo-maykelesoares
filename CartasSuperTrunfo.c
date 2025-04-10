@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //Teste Maykele
-//Nível Aventureiro;
+//Nível Mestre;
 
 int main() {
     printf(" Desafio Cartas Super Trunfo!\n");
@@ -15,7 +15,6 @@ int main() {
     float pib1, pib2;
     int pontos_turisticos1, pontos_turisticos2;    
 
-    // retirei o & antes das variáveis tipo char pois estava dando erro
     // Solicitação de dados da carta 1
     printf("Digite os dados da carta 1!\n");
 
@@ -44,7 +43,7 @@ int main() {
     float pib_per_capita1 = pib1 / (float)populacao1; //define pib per capita através de uma operação aritmética entre duas variáveis
     float inverso_densidade1 = 1 / densidade1; // calcula o inverso da densidade populacional    
 
-    float superpoder1 = ((float)populacao1 + area1 + pib1 + (float)pontos_turisticos1 + inverso_densidade1);    
+    float super_poder1 = ((float)populacao1 + area1 + pib1 + (float)pontos_turisticos1 + inverso_densidade1);
     
     //Solicita os dados da carta 2
     printf("\n Digite os dados da carta 2!\n");
@@ -75,16 +74,24 @@ int main() {
 
     float inverso_densidade2 = 1 / densidade2;    
 
-    float superpoder2 = ((float)populacao2 + area2 + pib2 + (float)pontos_turisticos2 + inverso_densidade2);    
+    float super_poder2 = ((float)populacao2 + area2 + pib2 + (float)pontos_turisticos2 + inverso_densidade2);    
 
     //imprime os dados da carta 1
-    printf("\n DADOS DA CARTA 1: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f reais. \n Pontos Turísticos: %d. \n Super Poder: %.4f. \n", 
-        estado1, codigo_carta1, nome1, populacao1, area1, densidade1, pib1, pib_per_capita1, pontos_turisticos1, superpoder1);
+    printf("\n DADOS DA CARTA 1: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f reais. \n Pontos Turísticos: %d. \n Super Poder: %.3f. \n", 
+        estado1, codigo_carta1, nome1, populacao1, area1, densidade1, pib1, pib_per_capita1, pontos_turisticos1, super_poder1);
 
     //imprime os dados da carta 2
-    printf("\n DADOS DA CARTA 2: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f reais. \n Pontos Turísticos: %d. \n Super Poder: %.4f \n", 
-        estado2, codigo_carta2, nome2, populacao2, area2, densidade2, pib2, pib_per_capita2, pontos_turisticos2, superpoder2);
-
+    printf("\n DADOS DA CARTA 2: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f reais. \n Pontos Turísticos: %d. \n Super Poder: %.3f \n", 
+        estado2, codigo_carta2, nome2, populacao2, area2, densidade2, pib2, pib_per_capita2, pontos_turisticos2, super_poder2);
+    
+    printf("COMPARAÇÃO DE CARTAS: \n");
+    printf("População: Carta 1 venceu (%d)", populacao1 > populacao2);
+    printf("Área: Carta 1 venceu (%d)", area1 > area2);
+    printf("PIB: Carta 1 venceu (%d)", pib1 > pib2);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)", pontos_turisticos1 > pontos_turisticos2);
+    printf("Densidade Populacional: Carta 1 venceu (%d)", densidade1 < densidade2);
+    printf("PIB per Capita: Carta 1 venceu (%d)", pib_per_capita1 > pib_per_capita2);
+    printf("Super Poder: Carta 1 venceu (%d)", super_poder1 > super_poder2);
 
     return 0; //Informa que o código foi executado com sucesso.
 }
