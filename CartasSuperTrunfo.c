@@ -77,17 +77,17 @@ int main() {
     float super_poder2 = ((float)populacao2 + area2 + pib2 + (float)pontos_turisticos2 + inverso_densidade2);    
 
     //imprime os dados da carta 1
-    printf("\n DADOS DA CARTA 1: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f reais. \n Pontos Turísticos: %d. \n Super Poder: %.3f. \n", 
+    printf("\n DADOS DA CARTA 1: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f milhões de reais. \n Pontos Turísticos: %d. \n Super Poder: %.3f. \n", 
         estado1, codigo_carta1, nome1, populacao1, area1, densidade1, pib1, pib_per_capita1, pontos_turisticos1, super_poder1);
 
     //imprime os dados da carta 2
-    printf("\n DADOS DA CARTA 2: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f reais. \n Pontos Turísticos: %d. \n Super Poder: %.3f \n", 
+    printf("\n DADOS DA CARTA 2: \n Estado: %s. \n Código da carta: %s. \n Cidade: %s. \n População: %lu habitantes. \n Área Territorial: %.2f km². \n Densidade Populacional: %.2f hab/km². \n PIB: %.2f bilhões de reais. \n PIB per Capita: %.2f milhões de reais. \n Pontos Turísticos: %d. \n Super Poder: %.3f \n", 
         estado2, codigo_carta2, nome2, populacao2, area2, densidade2, pib2, pib_per_capita2, pontos_turisticos2, super_poder2);
     
     printf("COMPARAÇÃO DE CARTAS: \n");
     printf("População: Carta 1 venceu (%d) \n", populacao1 > populacao2);
     printf("Área: Carta 1 venceu (%d) \n", area1 > area2);
-    printf("PIB: Carta 1 venceu (%d)", pib1 > pib2);
+    printf("PIB: Carta 1 venceu (%d) \n", pib1 > pib2);
     printf("Pontos Turísticos: Carta 1 venceu (%d) \n", pontos_turisticos1 > pontos_turisticos2);
     printf("Densidade Populacional: Carta 1 venceu (%d) \n", densidade1 < densidade2);
     printf("PIB per Capita: Carta 1 venceu (%d) \n", pib_per_capita1 > pib_per_capita2);
